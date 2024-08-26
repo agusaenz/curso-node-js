@@ -6,3 +6,26 @@ GET http://localhost:1234/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
 
 ### Get movies by genre
 GET http://localhost:1234/movies?genre=Sci-FI
+
+### Create a movie with POST
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+    "title": "The Godfather",
+    "genre": ["Drama", "Crime"],
+    "year": 1972,
+    "director": "Francis Ford Coppola",
+    "duration": 175,
+    "poster": "https://www.imdb.com/title/tt0068646/mediaviewer/rm4283873280"
+}
+
+### Update a movie
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "title": "hola",
+    "year": 1998,
+    "id": "1"
+}
